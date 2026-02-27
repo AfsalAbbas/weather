@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | SkyCast AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --accent-blue: #3498db;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body { 
+            background-color: var(--primary-dark); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        /* Navbar - Unified Design */
+        .navbar { 
+            background: rgba(15, 23, 42, 0.95) !important; 
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+        }
+        .navbar-brand { font-weight: 800; letter-spacing: 2px; color: #fff !important; }
+        .nav-link { color: #cbd5e1 !important; margin: 0 10px; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--accent-blue) !important; }
+
+        /* Hero Header with Thunder Background */
+        .about-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('thunder.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        /* Glassmorphism Sections */
+        .content-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .weather-detail-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 2px solid rgba(52, 152, 219, 0.3);
+            transition: transform 0.4s ease;
+        }
+        .weather-detail-img:hover { transform: scale(1.03); }
+
+        h2, h3 { color: var(--accent-blue); font-weight: 800; margin-bottom: 20px; }
+        .theory-para { font-size: 1.1rem; color: #e2e8f0; text-align: justify; }
+        .highlight { color: var(--accent-blue); font-weight: bold; }
+
+        footer { padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; color: #64748b; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">SKYCAST <span style="color:var(--accent-blue)">AI</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/predict">Predict</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="about-header">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Atmospheric <span style="color:var(--accent-blue)">Science</span></h1>
+        <p class="lead text-light mx-auto" style="max-width: 800px;">Understanding the complex machinery of our planet's climate to provide precision intelligence.</p>
+    </div>
+</header>
+
+<main class="container py-5">
+    
+    <div class="row g-5 align-items-center mb-5">
+        <div class="col-lg-7">
+            <div class="content-card">
+                <h2>Radiation & Nebulosity</h2>
+                <p class="theory-para">
+                    The fundamental driver of all weather is solar energy. <span class="highlight">Sunny weather</span> occurs during high-pressure regimes where air descends, compressing and warming as it moves toward the surface. This downward motion inhibits the rising of moist air, leading to cloudless, vibrant skies. However, this lack of atmospheric "shading" increases the UV Index significantly, necessitating careful environmental monitoring.
+                </p>
+                <p class="theory-para">
+                    When moisture is present, we encounter <span class="highlight">Cloudy conditions</span>, or nebulosity. Clouds are visible masses of liquid droplets or frozen crystals suspended in the atmosphere. They serve as the Earth's thermal regulator: by day, they increase albedo by reflecting sunlight; by night, they trap terrestrial longwave radiation, keeping the surface warmer than it would be under clear skies.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <img src="static/nature.jpg" class="weather-detail-img mb-4" alt="Sunny Weather">
+            <img src="static/thunder.jpg" class="weather-detail-img" alt="Cloudy Weather">
+        </div>
+    </div>
+
+    <div class="row g-5 align-items-center">
+        <div class="col-lg-5 order-lg-1 order-2">
+            <img src="static/night.jpg" class="weather-detail-img mb-4" alt="Rainy Weather">
+            <img src="static/rainbow.jpg" class="weather-detail-img" alt="Snowy Weather">
+        </div>
+        <div class="col-lg-7 order-lg-2 order-1">
+            <div class="content-card">
+                <h2>Precipitation & The Cryosphere</h2>
+                <p class="theory-para">
+                    <span class="highlight">Rainy weather</span> is the liquid manifestation of the water cycle. It begins when water vapor undergoes condensation around microscopic nuclei. As droplets coalesce and gravity overcomes atmospheric lift, precipitation falls. This process is vital for redistributing thermal energy across the globe and sustaining terrestrial ecosystems, though it significantly impacts visibility and local humidity levels.
+                </p>
+                <p class="theory-para">
+                    When the thermal profile of the atmosphere drops below 0°C, we witness <span class="highlight">Snowy weather</span>. This involves deposition, where water vapor transforms directly into ice crystals. These crystals bond into complex hexagonal structures known as snowflakes. Beyond its aesthetic beauty, snow play a critical role in the cryosphere, insulating the ground and reflecting massive amounts of solar energy back into space to maintain global cooling.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-card text-center mt-5">
+        <h3>The SkyCast Mission</h3>
+        <p class="theory-para mx-auto" style="max-width: 900px;">
+            At SkyCast AI, we believe that data is the key to resilience. By analyzing 
+            <span class="highlight">Atmospheric Pressure, Wind Velocity, and Humidity</span>, 
+            our machine learning models decode the chaos of the weather. Whether it is the 
+            electrical intensity of a thunderstorm or the calm of a sunny afternoon, 
+            we provide the insights you need to navigate the world safely.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 SkyCast AI Labs | Precision Meteorology through Artificial Intelligence</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
